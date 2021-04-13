@@ -1,0 +1,2 @@
+# Stock-Price-Predictions
+This project serves as the final and ultimate exam for Purwadhika Data Science and Machine Learning course I have been taking for the past 5 months. I have an interest in stock markets and pricing, that is why I decided to choose this topic. Even though far from perfect, I hope this project can be a stepping stone for me to learn more about data science algorithms in the future.

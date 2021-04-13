@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<head>
+  <body style="background-image: url({{url_for('static',filename='Back.png') }});background-size:auto;background-repeat:no-repeat"></body>
+</head>
+
+<center>
+  <br>
+  <img src="../static/Dataset.png" width="10%" ><br><br>
+  <h3><b>Bank Stock Compiled Dataset</b></h3>
+  <br>
+  <br>
+</center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                {% for item in data.columns%}
+                    <th>{{item}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, item in data.iterrows()%}
+            <tr>
+                {% for col in item %}
+                    <td> {{col}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock body%}

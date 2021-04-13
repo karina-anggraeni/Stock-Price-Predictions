@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<head>
+  <body style="background-image: url({{url_for('static',filename='Back.png') }});background-size:auto;background-repeat:no-repeat"></body>
+</head>
+
+<center>
+    <br>
+    <img src="../static/Prediction.png" width="10%" ><br><br>
+    <h3><b>Stock Price Predictions</b></h3>
+    <br>
+    <br>
+</center>
+
+    <div class="container-fluid">
+        <h4><span class="badge badge-secondary">BBCA Stock Prediction</span></h4>
+        <center><img src="../static/BBCA LSTM.png"><br><br></center>
+    </div>
+
+    <div class="container-fluid">
+        <h4><span class="badge badge-secondary">BBRI Stock Prediction</span></h4>
+        <center><img src="../static/BBRI LSTM.png"><br><br></center>
+    </div>
+
+    <div class="container-fluid">
+        <h4><span class="badge badge-secondary">BNII Stock Prediction</span></h4>
+        <center><img src="../static/BNII LSTM.png"><br><br></center>
+    </div>
+
+
+{% endblock body%}

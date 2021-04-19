@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<html>
+    <head>
+        <body style="background-image: url({{url_for('static',filename='PredictBackground.png') }});background-size:cover;"></body>
+    </head>
+
+    <div class="container">
+        </br> 
+        </br> 
+        <h2><b>BBCA Stock Price Prediction Result</b></h2>
+        </br> 
+        </br> 
+        </br> 
+        </br> 
+        <h4 style="color: rgb(73, 172, 230)"><span style="padding-left:50px;"><strong>Buy Price: </strong> IDR {{data['Buy']}} </span></h4>
+        </br> 
+        <h4 style="color: rgb(73, 172, 230)"><span style="padding-left:50px;"><strong>Upcoming Days: </strong> {{data['Days']}} days</span></h4>
+        </br>  
+        <h4 style="color: rgb(73, 172, 230)"><span style="padding-left:50px;"><strong>Predicted Price: </strong> IDR {{predict_price}} </span></h4>
+        </br>   
+        <h4 style="color: rgb(73, 172, 230)"><span style="padding-left:50px;"><strong>Return Ratio: </strong> {{return_ratio}} </span></h4>
+        </br> 
+    </div>
+</html>
+{% endblock body%}

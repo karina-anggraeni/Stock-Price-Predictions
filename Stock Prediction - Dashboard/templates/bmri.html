@@ -1,0 +1,53 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<head>
+  <body style="background-image: url({{url_for('static',filename='Back.png') }});background-size:auto;background-repeat:no-repeat"></body>
+</head>
+
+<center>
+  <br>
+  <img src="../static/bmri.jpg" width="15%" ><br><br>
+  <h3><b>BMRI Stock Dataset</b></h3>
+  <br>
+</center>
+
+<center>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(81, 179, 236)">Chose Dataset:
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="/dataset">ALL</a></li>
+            <li><a href="/bbca">BBCA</a></li>
+            <li><a href="/mega">MEGA</a></li>
+            <li><a href="/bbri">BBRI</a></li>
+            <li><a href="/bmri">BMRI</a></li>
+            <li><a href="/sdra">SDRA</a></li>
+            <li><a href="/bnii">BNII</a></li>
+        </ul>
+  </div>
+  <br>
+  <br>
+</center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                {% for item in data.columns%}
+                    <th>{{item}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, item in data.iterrows()%}
+            <tr>
+                {% for col in item %}
+                    <td> {{col}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock body%}

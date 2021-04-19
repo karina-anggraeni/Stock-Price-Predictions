@@ -1,0 +1,46 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<html>
+    <head>
+        <body style="background-image: url({{url_for('static',filename='Back.png') }});background-size:auto;background-repeat:no-repeat"></body>
+    </head>
+    
+    <center>
+        <br>
+        <img src="../static/Prediction.png" width="10%" ><br><br>
+        <h3><b>Predict BBRI Stock Price</b></h3>
+        <br>
+        <br>
+    </center>
+
+    <center>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(81, 179, 236)">Select Stock:
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="/prediction_bbca">BBCA</a></li>
+                <li><a href="/prediction_bbri">BBRI</a></li>
+                <li><a href="/prediction_bnii">BNII</a></li>
+            </ul>
+      </div>
+      <br>
+      <br>
+    </center>
+
+    <div class="container pt 5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-3">
+                <h5>Please fill in this form:</h5>
+                <!-- method POST mengubah menjadi list 2 dimensi -->
+                <form action="/result_bbri" method="POST">
+                    <input type="number" step="1" min="1905" max="4740" name="Buy" placeholder="Buy Price" class="form-control form-control-sm mt-2" required>
+                    <input type="number" step="1" min="1" max="246" name="Days" placeholder="Upcoming Days" class="form-control form-control-sm mt-2" required>
+                    <center><button type="submit" class="btn btn-warning mt-4"> SUBMIT</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</html>
+
+{% endblock body%}

@@ -9,7 +9,7 @@ Predicting stock prices could be tricky and time-consuming. Generaly, there are 
 We want to predict possible stock prices outcomes or expected trends by fitting its historical data to machine learning algorithms. This approach will be beneficial for traders, investors, fund managers, financial advisors, securities, etc.
 
 ### **Dataset** </br>
-I am using stock historical data from 6 different banks that I choose from 3 categories. Those are national private bank (BBCA and MEGA), state-owned public bank (BBRI and BMRI) and foreign private bank (SDRA and BNII). I collect the data from Neo HOTS Application by Mirae Asset Securities (for private used only).
+I am using stock historical data from 6 different banks that I choose from 3 categories. Those are national private bank (BBCA and MEGA), state-owned public bank (BBRI and BMRI), and foreign private bank (SDRA and BNII). I collect the data from Neo HOTS Application by Mirae Asset Securities (for private used only).
 
 ### **Insights and Analysis** </br>
 I explored each datasets to come with insightful informations about said datasets. For example, I wanted to map how each stock's returns are correlated to one another.
@@ -30,6 +30,19 @@ When LSTM Model uses its own prediction values repeatedly as an input to predict
 
 ### **Challenges** </br>
 Although this model seems to best fit to our data, it needs quite some computational effort for large datasets. Furthermore, the number of layers and parameter used for data training does not follow a specific rule and tuning the parameters is still a trial and error process.
+
+### **Deployment** </br>
+I also created a simple dashboard along with this project.
+
+![Home](https://github.com/karina-anggraeni/Stock-Price-Predictions/blob/main/Sample%20Image/DashboardHome.png)
+
+Users can input the ammount of price when they first buy the stock and how many days into the future they want to predict the price.
+
+![Predict](https://github.com/karina-anggraeni/Stock-Price-Predictions/blob/main/Sample%20Image/DashboardPredict.png)
+
+ They can see how much expected returns will they get from said sell price.
+ 
+ ![Result](https://github.com/karina-anggraeni/Stock-Price-Predictions/blob/main/Sample%20Image/DashboardResult.png)
 
 ### **Reference** </br>
 1. https://www.youtube.com/watch?v=QIUxPv5PJOY
